@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Bookstore</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    #topBar {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    #navLinks {
+      display: flex;
+      justify-content: space-around;
+      background-color: #ddd;
+      padding: 10px;
+    }
+    #framesContainer {
+      display: flex;
+      flex: 1;
+    }
+    #leftFrame {
+      flex: 1;
+      padding: 20px;
+    }
+    #rightFrame {
+      flex: 3;
+      padding: 20px;
+    }
+   
+    .lister{
+        list-style-type: none;
+        padding-top: 20px;
+    }
+    .listedelem{
+        padding: 20px;
+        font-weight: 800;
+    }
+    form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-bottom: 16px;
+            
+        }
+        .radio{
+            display: flex;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+  </style>
+</head>
+<body>
+  <div id="topBar">
+    <img src="http://recb.ac.in/img/banner1.png" >
+  </div>
+  <div id="navLinks">
+    <a href="home.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="registration.html">Registration</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="cart.html">Cart</a>
+  </div>
+  <div id="framesContainer">
+    <div id="leftFrame">
+      <ul class="lister">
+        <li class="listedelem"><a href=""> CSE </a></li>
+        <li class="listedelem"><a href=""> ECE </a></li>
+        <li class="listedelem"><a href=""> EE </a></li>
+        <li class="listedelem"><a href=""> CIVIL </a></li>
+      </ul>
+    </div>
+    <div id="rightFrame">
+      <!-- Right Frame Content -->
+      <form action="submit_form.php" method="post">
+        <h2>Registration Form</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <div class="radio">
+        <label>Gender</label>
+        <input type="radio" id="male" name="Gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Gender" value="female" required>
+        <label for="female">Female</label>
+    </div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <div class="radio">
+        <label>Languages known:</label>
+        <input type="checkbox" id="english" name="languages[]" value="English">
+        <label for="english">English</label>
+        <input type="checkbox" id="telugu" name="languages[]" value="Telugu">
+        <label for="telugu">Telugu</label>
+        <input type="checkbox" id="hindi" name="languages[]" value="Hindi">
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" id="tamil" name="languages[]" value="Tamil">
+        <label for="tamil">Tamil</label>
+</div>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+  
+  </div>
+</body>
+</html>
